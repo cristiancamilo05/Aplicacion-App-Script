@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+
+        <main>
+            <section id="banner">
+                
+                <div class="contenedor">
+               <img src="https://s26.postimg.org/bgma1gpt5/Captura_de_pantalla_de_2017-09-20_16-03-26.jpg">
+                </div>
+            </section>
+            
+            <section id="bienvenidos">
+            <div class="contenedor">
+                <h2>Administrador de deudas</h2>
+                <p>Esta aplicacion web te permite gestionar tus deudas a traves de la suite de google, te recordara los pagos que debes de realizar para estar al dia con ellos.A continuacion encontraras una breve descripcion de que hace cada una de las opciones displonibles de nuestro aplicativo </p>
+                <br>
+                 <div class = "tabla">
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS0SFn8KazBdU8EwE4VdGE9lEWcrbA-6K3_uUQP8gsqzyDzR7UUatrQr8gmCgiT5udHPdGlnObjxcil/pubhtml?widget=true&amp;headers=false" height = 200  width = 800></iframe>
+                </div>
+                </div>
+            </section>
+   
+            
+            <section id="blog">
+                <h3>Posibilidades</h3>                
+               
+                <div class="contenedor">
+                    <article>
+                        <img src="http://is3.mzstatic.com/image/thumb/Purple118/v4/10/1e/43/101e433d-aeac-e7cd-eec0-fe0afb68b3f9/source/1200x630bb.jpg">
+                        
+                        <h4> Crear una nueva deuda,</h4>
+                        <h4>permite pormedio de google </h4>
+                       <h4>forms crear un acrededor,recibiras</h4>
+                        <h4>registrarla en el Calendario,</h4>
+                        <h4>notificaciones en tu gmail con informacion</h4>
+                        <h4>sobre los pagos que debes</h4>
+                        <h4>de realizar mensualmente</h4>
+                      
+                      
+                       
+                    </article>
+                    
+                    <article>
+                        <img src="https://lh3.googleusercontent.com/8VF8Oom0BIT89x24dFfhjexnQ2EQy_vNx5Qxob9rWxzPDyuc55IzB5POJ1Vcm2Xve4o2=w300">
+                        <h4>Buscar Por Tipo </h4>
+                        <h4>Crea un documento pdf  con una tabla</h4>
+                        <h4>que contiene informacion de</h4>
+                        <h4>los pagos que se realizan</h4>
+                        <h4>por un tipo especifico</h4>
+                        <h4>de acreedor y es compartido</h4>
+                        <h4>via correo electronico</h4>
+                    </article>
+                    
+                    <article>
+                        <img src="https://lh4.ggpht.com/u9ofV9e2diX3giScuXT46B4A0vxFw8tj5NzHQJVAqAKwL5b_o8CHnO-qiZZIZYHlTg=w300">
+                        
+                        <h4>Generar Lista De Acrededores</h4>
+                        <h4>Crea un documento pdf  con una tabla</h4>
+                        <h4>que contiene informacion de</h4>
+                        <h4>todos los acreededores</h4>
+                        <h4>y es compartido via</h4>
+                        <h4>correo electronico</h4>
+                    </article>
+                    
+                </div>
+            </section>
+            
+            <section id="info">
+                <h3>Por favor selecciona una de las siguientes opciones para comenzar a gestionar tus deudas</h3>
+                <div class="contenedor">
+                    <div class="info-pet">
+                       <a href="https://goo.gl/forms/iCGoDnXTIFIq66yP2" target="_blank" ><img src="https://cdn2.iconfinder.com/data/icons/ios-7-style-metro-ui-icons/512/Flurry_Google_Calendar.png"/></a>
+                        <h4>Nueva deuda</h4>
+                    </div>
+                    <div class="info-pet">
+                       <a href="https://goo.gl/forms/66HSzEi5HZ7JQXi02" target="_blank" ><img src="https://lh5.ggpht.com/fDsjZ1Uzwm_HZIWykCzBMUYHPvvuiif1eVIoi0NRnCPRSKlaAAE8inCnilkdDBQ5CA=w300" alt=""/></a>
+                        <h4>Reporte Por Tipo</h4>
+                    </div>
+                    <div class="info-pet">
+                       <a onClick="functionPDF()"> <img src="https://lh6.ggpht.com/8-N_qLXgV-eNDQINqTR-Pzu5Y8DuH0Xjz53zoWq_IcBNpcxDL_gK4uS_MvXH00yN6nd4=w300" alt=""></a>
+                        <h4>Reporte Pagos </h4>
+                    </div>
+                </div>
+            </section>
+            
+            <script> function functionPDF(){
+            google.script.run.withSuccessHandler(alert).withFailureHandler(alert).enviarReporte();
+            
+            }</script>
+        </main>
+      
+       
+  </body>
+  
+
+  <link rel="stylesheet" type="text/css" href="CSS.css"> 
+  <style type="text/css"> 
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://weloveiconfonts.com/api/?family=fontawesome|typicons);
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background: #A9E2F3;
+    color: #fff;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.contenedor {
+    width: 98%;
+    margin: auto;
+}
+
+h1 {
+    float: left;
+}
+
+header .contenedor {
+    display: table;
+}
+
+section {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+#bienvenidos {
+    text-align: center;
+}
+
+footer .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+.copy {
+    font-size: 20px;
+}
+
+.sociales {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+}
+
+.sociales a {
+    color: #333;
+    text-decoration: none;
+}
+
+@media (min-width:768px) { 
+    .sociales {
+        width: auto;
+    }
+    
+    footer .contenedor {
+        justify-content: space-between;
+    }
+}
+
+
+@media (min-width:1024px) {
+    .contenedor {
+        width: 1000px;
+    }
+}
+
+
+#blog h3, h4 {
+    text-align: center;
+}
+
+#blog .contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#blog article {
+    margin: 15px;
+}
+
+#blog img {
+    width: 100%;
+    max-width: 280px;
+}
+#banner {
+    margin-top: 50px;
+    position: relative;
+}
+
+#banner img {
+    width: 100%;
+    
+}
+
+#banner .contenedor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #fff;
+}
+
+#banner h2 {
+    font-size: 28px;
+}
+
+#banner a {
+    display: block;
+    width: 100px;
+    color: #fff;
+    text-decoration: none;
+    padding: 7px;
+    margin-top: 10px;
+    border: 3px solid #fff;
+}
+
+#banner a:hover {
+    background: rgba(51,51,51,0.5);
+}
+
+@media (min-width:480px) {
+    #banner h2 {
+        font-size: 40px;
+    }
+    
+    #banner a {
+        margin-top: 25px;
+    }
+}
+
+@media (min-width:768px) { 
+    #banner {
+        height: 300px;
+        overflow: hidden;
+    }
+    
+    #banner img {
+        height: auto;
+       
+    }
+}
+
+@media (min-width:1024px) { 
+    #banner img {
+       
+    }
+}
+
+#info {
+    background: #A9E2F3;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+#info .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.info-pet {
+    margin: 20px;
+}
+
+
+#info .info-pet img:hover{
+    opacity: 1;
+ 
+    transform: scale(1.15);
+}
+
+#info .info-pet img:active{
+   
+   transform: scale(1);
+}
+.info-pet img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 7px solid #fff;
+}
+
+@media (min-width:480px) {
+    .info-pet {
+        width: 40%;
+    }
+}
+
+@media (min-width:1024px) {
+    .info-pet {
+        width: auto;
+    }
+}
+#menu-bar {
+    display: none;
+}
+
+header label {
+    float: right;
+    font-size: 28px;
+    margin: 6px 0;
+    cursor: pointer;
+}
+
+.menu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(140, 220, 230, 0.9);
+    transition: all 0.5s;
+    transform: translateX(-100%);
+}
+
+.menu a {
+    display: block;
+    color: #fff;
+    height: 50px;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom: 1px solid rgba(169, 226, 243, 0.3);
+}
+
+.menu a:hover {
+    background: rgba(169, 226, 243, 0.3);
+}
+
+#menu-bar:checked ~ .menu {
+    transform: translateX(0%);
+}
+
+@media (min-width:1024px) {
+    .menu {
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+    }
+    
+    .menu a {
+        border: none;
+    }
+    
+    header label { 
+        display: none;
+    }
+    
+    
+}
+
+#table1 table {
+  border-collapse: collapse;
+}
+
+#Bienvenidos.tabla {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+  </style>
+</html>
+
+
